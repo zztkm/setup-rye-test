@@ -9,4 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: zztkm/setup-rye@use-uv
+        with:
+          use-uv: 'true'
       - run: rye sync

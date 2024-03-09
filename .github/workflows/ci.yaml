@@ -1,0 +1,12 @@
+name: linkcheck
+
+on:
+  push:
+
+jobs:
+  linkcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: zztkm/setup-rye@use-uv
+      - run: rye sync
